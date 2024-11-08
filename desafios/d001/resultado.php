@@ -8,13 +8,17 @@
 </head>
 <body>
     <header>
-        <H1>Resultado do Processamento</H1>
+        
     </header>
     <main>
+    <H1>Resultado Final</H1>
         <?php 
-            $n = $_GET["nome"] ?? "Sem Nome";
-            $s = $_GET["sobrenome"] ?? "Desconhecido";
-            echo "<P> É um prazer te conhecer! <strong> $n $s </strong>. Este é meus site </p>"
+            $n = $_GET["numero"] ?? "Sem Nome";
+            $nant = $n - 1;
+            $nsu = $n + 1;
+            echo "<P> O número escolhido foi <strong> $n</strong>.</p>";
+            echo "<p>O antecessor é <strong>$nant</strong></P>";
+            echo "<p>O Sucessor é <strong>$nsu</strong> </p>";
         ?>
 
         <p><a href="javascript:history.go(-1)">Página Inicial</a></p>
