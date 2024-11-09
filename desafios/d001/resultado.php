@@ -17,7 +17,7 @@
             $nant = $n - 1;
             $nsu = $n + 1;
             echo "<P> O número escolhido foi <strong> $n</strong>.</p>";
-            echo "<p>O antecessor é <strong>$nant</strong></P>";
+            echo "<p>O Antecessor é <strong>$nant</strong></P>";
             echo "<p>O Sucessor é <strong>$nsu</strong> </p>";
         ?>
 
