@@ -13,15 +13,17 @@
     <main>
     <H1>Resultado Final</H1>
         <?php 
-            $n = $_GET["numero"] ?? "Sem Nome";
-            $nant = $n - 1;
-            $nsu = $n + 1;
+            $n = $_GET["numero"] ?? 0;
+        //    $ant = $n - 1;
+         //   $suc = $n + 1;
             echo "<P> O número escolhido foi <strong> $n</strong>.</p>";
-            echo "<p>O Antecessor é <strong>$nant</strong></P>";
-            echo "<p>O Sucessor é <strong>$nsu</strong> </p>";
+            echo "<p>O seu Antecessor é <strong>".($n -1) . "</strong>  </P>";
+            echo "<p>O seu Sucessor é <strong>".($n + 1) . "</strong> </p>";
         ?>
 
-        <p><a href="javascript:history.go(-1)">Página Inicial</a></p>
+        <button onclick="javascript:history.go(-1)">&#x2B05; Voltar</button>
+
+        
     </main>
     
 </body>
