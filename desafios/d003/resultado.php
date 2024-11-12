@@ -19,11 +19,12 @@
             $dolar = $real / $cotação;
 
 
-            $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+           // $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
 
             $n = $_GET["valor"] ?? "Não tem valor";
             $res = $n / 5.75;
-            echo "<P>Seus" . numfmt_format_currency($padrao, $real, "BRL"). " equivalem a U$" . numfmt_format_currency($padrao, $dolar, ("USD"));
+          //  echo "<P>Seus" . numfmt_format_currency($padrao, $real, "BRL"). " equivalem a U$" . numfmt_format_currency($padrao, $dolar, ("USD"));
+            echo "<p> Seus R\$" . number_format($real, 2, ",", ".") . " equivalem a US\$" . number_format($dolar, 2, ".", ",");
             echo "<p><strong>Cotação fixa de R$5,75</strong> informada diretamente no código </p>";
             ?>
 
