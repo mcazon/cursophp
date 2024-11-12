@@ -12,9 +12,18 @@
     </header>
     <main>
         <?php 
+            $cotação = 5.75;
+
+            $real = $_GET["valor"] ?? 0;
+
+            $dolar = $real / $cotação;
+
+
+            $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+
             $n = $_GET["valor"] ?? "Não tem valor";
             $res = $n / 5.75;
-            echo "<P>Seus<strong> R$ $n s </strong> equivalem a <strong> U$ $res</strong></p>";
+            echo "<P>Seus" . numfmt_format_currency($padrao, $real, "BRL"). " equivalem a U$" . numfmt_format_currency($padrao, $dolar, ("USD"));
             echo "<p><strong>Cotação fixa de R$5,75</strong> informada diretamente no código </p>";
             ?>
 
@@ -22,4 +31,4 @@
     </main>
     
 </body>
-</html>
+</html> 
