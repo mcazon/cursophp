@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <H1>Analisador de Número Real</H1>
-    </header>
+         
     <main>
+
         <?php 
-            $n = $_GET["nreal"];
+            $num = $_POST["nreal"] ?? 0;
             
-            echo "<P> É um prazer te conhecer! <strong> $n $s </strong>. Este é meus site </p>"
+            echo "<P> Analisando o número <strong>" . number_format($num, 3, ",", ".") . "</strong> informado pelo usuário. </p>";
+            $int = (int) $num;
+            $fra = $num - $int;
+
+            echo "<ul><li>A parte inteira do número é <strong>".number_format($int,0,",", ".")."</strong></li>";
+
+            echo "<li> A parte fracionária do número é <strong>" . number_format($fra, 3, ",", "."). "</strong></li></ul>";
+
         ?>
 
 <button onclick="javascript:history.go(-1)">&#x2B05; Voltar</button>
