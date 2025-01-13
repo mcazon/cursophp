@@ -11,6 +11,7 @@
         <pre>
             <?php 
                 echo "<h1>Superglobal GET</h1>";
+                var_dump($_GET);
             ?>
         </pre>
     </main>
