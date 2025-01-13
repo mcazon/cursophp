@@ -10,7 +10,7 @@
     <main>
         <pre>
             <?php 
-                echo "<h1>Superglobal GET</h1>";
+                echo "<h1>Superglobal 2 GET</h1>";
                 var_dump($_GET);
             ?>
         </pre>
